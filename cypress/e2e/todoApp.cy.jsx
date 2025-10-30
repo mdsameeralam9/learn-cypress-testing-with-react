@@ -13,7 +13,11 @@ describe("Todo App E2E Tests", () => {
 
   // initial Data
   it('testing initial data at UI', () => {
-    
+    cy.get('h1').should('contain', "Todo App")
+    cy.get('[data-testid=inputTodo]').should("exist")
+    cy.get('button').should('contain', "Add")
+    cy.get('p').should('exist')
+    cy.get('p').should('contain', 'No todos yet. Add one above!')
   })
 
   it("should allow a user to add a new todo", () => {

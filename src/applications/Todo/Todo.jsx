@@ -65,6 +65,7 @@ function TodoApp() {
         </h1>
         <div className="flex mb-4">
           <input
+            data-testid="inputTodo"
             type="text"
             name="textTodo"
             aria-label="textTodo"
