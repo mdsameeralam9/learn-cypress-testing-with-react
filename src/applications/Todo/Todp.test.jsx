@@ -84,10 +84,30 @@ describe("todo test", () => {
     expect(screen.queryByText("Old text")).not.toBeInTheDocument();
   });
 
+
+  // testinh ul
+  test("testing ul and li", async() => {
+    const userEvnt = userEvent.setup();
+    render(<Todo />);
+
+    const ul = screen.getByTestId('ulLits')
+    expect(ul).toBeInTheDocument()
+    expect(screen.queryAllByRole('listitem')).toHaveLength(0);
+
+    const inpt = screen.getByPlaceholderText('Add a new todo...');
+    await userEvnt.type(inpt, 'buy product');
+    await userEvnt.keyboard('{Enter}');
+
+    expect(screen.getAllByRole("listitem")).toHaveLength(1)
+
+  })
+
   // snapshot testing
   it("snapshot testing", () => {
     const { container } = render(<Todo />);
     expect(container).toMatchSnapshot();
   });
+
+
 
 });
