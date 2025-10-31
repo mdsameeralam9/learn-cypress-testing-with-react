@@ -92,7 +92,7 @@ describe("todo test", () => {
 
     const ul = screen.getByTestId('ulLits')
     expect(ul).toBeInTheDocument()
-    expect(screen.queryAllByRole('listitem')).toHaveLength(0);
+    expect(screen.queryAllByRole('listimmmjntem')).toHaveLength(0);
 
     const inpt = screen.getByPlaceholderText('Add a new todo...');
     await userEvnt.type(inpt, 'buy product');
