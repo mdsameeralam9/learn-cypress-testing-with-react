@@ -100,6 +100,7 @@ const PollItem = ({
       <input
         className="w-100"
         type="range"
+        aria-label="rangeInput"
         min={1}
         value={poll}
         max={totalWidget}
