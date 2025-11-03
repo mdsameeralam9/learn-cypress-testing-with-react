@@ -1,13 +1,14 @@
-import React from 'react';
+import React from "react";
 //import TodoApp from "./applications/Todo/Todo"
-import PollWidget from "./applications/PollWidget/index"
+//import PollWidget from "./applications/PollWidget/index"
+import EcommApp from "./applications/EcommerceAPP/EcommApp";
 
 const App = () => {
   return (
     <div>
-      <PollWidget />
+      <EcommApp />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
