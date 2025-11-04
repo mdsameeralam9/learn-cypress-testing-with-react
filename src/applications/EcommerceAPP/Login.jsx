@@ -81,6 +81,8 @@ export default function Login() {
           <input
             type="email"
             name="email"
+            aria-label="email_Input"
+            data-testid="email_Input_testId"
             required
             pattern={emailPattern}
             placeholder="Enter email"
